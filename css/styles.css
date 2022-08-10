@@ -64,6 +64,8 @@ body {
     list-style: none;
 }
 .nav-item {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -103,9 +105,14 @@ margin-right: 50px;
 .tel-icon {
     fill: var(--secondary-text-color);
     margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-mail,
 .contacts-tel {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,6 +296,8 @@ margin-right: 30px;
 
 }
 .net-link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,6 +316,8 @@ margin-right: 30px;
 }
 
 .net-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     fill: #AFB1B8;
 }
 /* Clients */
@@ -325,6 +336,8 @@ margin-right: 30px;
     padding: 0;
 }
 .clients-link {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -334,6 +347,8 @@ margin-right: 30px;
     border-radius: 4px;
 }
 .clients-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     fill: #AFB1B8;
 }
 .clients-link:hover,
@@ -398,6 +413,8 @@ background: rgba(255, 255, 255, 0.1);
     padding: 0;
 }
 .location {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: inline-block;
     
     color: #FFFFFF;
@@ -417,6 +434,8 @@ background: rgba(255, 255, 255, 0.1);
 }
 .mail,
 .tel {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: inline-block;
 
     color: rgba(255, 255, 255, 0.6);
@@ -451,6 +470,10 @@ background: rgba(255, 255, 255, 0.1);
     margin-right: 8px;
 }
 .btn {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     border-radius: 4px;
     border-color: transparent;
     padding: 6px 22px;
@@ -488,6 +511,8 @@ background: rgba(255, 255, 255, 0.1);
     margin-bottom: 0px;
 }
 .images-link {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: block;
     text-decoration: none;
 }
