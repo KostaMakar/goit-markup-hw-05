@@ -534,6 +534,7 @@ background: rgba(255, 255, 255, 0.1);
 }
 .pre-photo {
     position: relative;
+    overflow: hidden;
 }
 .pre-photo::before {
     display: inline-block;
@@ -544,7 +545,9 @@ background: rgba(255, 255, 255, 0.1);
     background-color: rgba(33, 150, 243, 0.9);
 
     opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text {
     display: inline-block;
@@ -552,7 +555,9 @@ background: rgba(255, 255, 255, 0.1);
     padding: 63px 24px;
 
     opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     font-weight: 400;
     font-size: 18px;
@@ -573,10 +578,12 @@ background: rgba(255, 255, 255, 0.1);
 .images-link:hover ::before,
 .images-link:focus ::before {
     opacity: 1;
+    transform: translateY(0%);
 }
 .images-link:hover .text,
 .images-link:focus .text {
     opacity: 1;
+    transform: translateY(0%);
 }
 .images-title {
     margin-bottom: 4px;
