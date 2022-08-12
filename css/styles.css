@@ -99,14 +99,14 @@ body {
    
    background-color: var(--special-text-color);
    border-radius: 2px;
-   transition: transform var(--basic-animation);
-   transform: rotateY(0deg)
+   /* transition: transform var(--basic-animation);
+   transform: rotateY(0deg); */
 }
-.current:hover::after,
+/* .current:hover::after,
 .current:focus::after
 {
 transform: rotateY(120deg);
-}
+} */
 .contacts-list {
     display: flex;
 }
