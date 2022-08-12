@@ -23,8 +23,12 @@
                         <li class="nav-content">
                             <a class="nav-item current" href="">Студия</a>
                         </li>
-                        <li class="nav-content"><a class="nav-item" href="./portfolio.html">Портфолио</a></li>
-                        <li class="nav-content"><a class="nav-item" href="">Контакты</a></li>
+                        <li class="nav-content">
+                            <a class="nav-item" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav-content">
+                            <a class="nav-item" href="">Контакты</a>
+                        </li>
                     </ul>
                 </nav>
                 <ul class="contacts-list list">
@@ -48,7 +52,12 @@
                 <div class="overlay">
                     <div class="container">
                     <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-                    <button class="order-button" type="button">Замовити послугу</button>
+                    <button data-modal-open class="order-button">Замовити послугу</button>
+                    </div>
+                </div>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <button data-modal-close class="btn-close">Close</button>
                     </div>
                 </div>
             </section>
@@ -319,6 +328,20 @@
             </div>
         </div>
     </footer>
+    <script>
+         const refs = {
+                openModalBtn: document.querySelector("[data-modal-open]"),
+                closeModalBtn: document.querySelector("[data-modal-close]"),
+                modal: document.querySelector("[data-modal]"),
+            };
+
+            refs.openModalBtn.addEventListener("click", toggleModal);
+            refs.closeModalBtn.addEventListener("click", toggleModal);
+
+            function toggleModal() {
+                refs.modal.classList.toggle("is-hidden");
+            }
+    </script>
 </body>
 
 </html>
