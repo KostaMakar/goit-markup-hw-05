@@ -5,7 +5,7 @@
     --nav-bg-color: #fff;
     --main-bg-color:#fff;
     --special-bg-color:#2F303A;
-    --basic-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --basic-animation: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* body */
 h1, h2, h3, h4, h5, h6, p {
@@ -99,10 +99,16 @@ body {
    
    background-color: var(--special-text-color);
    border-radius: 2px;
+   transition: transform var(--basic-animation);
+   transform: rotateY(0deg)
+}
+.current:hover::after,
+.current:focus::after
+{
+transform: rotateY(120deg);
 }
 .contacts-list {
     display: flex;
-    /* margin-left: auto; */
 }
 .contacts-item:not(:last-child) {
 margin-right: 50px;
@@ -179,16 +185,26 @@ margin-right: 50px;
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.2);
+
+    /* adding animation for backdrop */
+    opacity: 1;
+    transition: opacity var(--basic-animation);
 }
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
 }
+/* modal window closed condition */
+.backdrop.is-hidden .modal {
+transform: rotate(90deg);
+}
+/* modal window opened condition */
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform var(--basic-animation);
 
     min-width: 528px;
     min-height: 581px;
