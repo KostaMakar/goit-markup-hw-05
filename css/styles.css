@@ -85,6 +85,21 @@ body {
 .nav .nav-item.current {
     color: var(--special-text-color)
 }
+.nav-item {
+    position: relative;
+}
+.current::after {
+   content: "";
+   position: absolute;
+   left:0;
+   bottom: 0;
+
+   width: 100%;
+   height: 4px;
+   
+   color: var(--special-text-color);
+   border-radius: 2px;
+}
 .contacts-list {
     display: flex;
     /* margin-left: auto; */
