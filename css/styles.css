@@ -5,6 +5,7 @@
     --nav-bg-color: #fff;
     --main-bg-color:#fff;
     --special-bg-color:#2F303A;
+    --basic-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* body */
 h1, h2, h3, h4, h5, h6, p {
@@ -64,7 +65,7 @@ body {
     list-style: none;
 }
 .nav-item {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--basic-animation);
 
     display: block;
     padding-top: 32px;
@@ -105,7 +106,7 @@ margin-right: 50px;
 .tel-icon {
     fill: var(--secondary-text-color);
     margin-right: 10px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--basic-animation);
 }
 .contacts-mail,
 .contacts-tel {
@@ -318,7 +319,7 @@ margin-right: 30px;
 
 }
 .net-link {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--basic-animation);
 
     display: flex;
     justify-content: center;
@@ -338,7 +339,7 @@ margin-right: 30px;
 }
 
 .net-icon {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--basic-animation);
 
     fill: #AFB1B8;
 }
@@ -358,7 +359,7 @@ margin-right: 30px;
     padding: 0;
 }
 .clients-link {
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color var(--basic-animation);
 
     display: flex;
     justify-content: center;
@@ -369,7 +370,7 @@ margin-right: 30px;
     border-radius: 4px;
 }
 .clients-icon {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--basic-animation);
 
     fill: #AFB1B8;
 }
@@ -435,7 +436,7 @@ background: rgba(255, 255, 255, 0.1);
     padding: 0;
 }
 .location {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--basic-animation);
 
     display: inline-block;
     
@@ -456,7 +457,7 @@ background: rgba(255, 255, 255, 0.1);
 }
 .mail,
 .tel {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--basic-animation);
 
     display: inline-block;
 
@@ -492,9 +493,9 @@ background: rgba(255, 255, 255, 0.1);
     margin-right: 8px;
 }
 .btn {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--basic-animation), 
+    background-color var(--basic-animation),
+    box-shadow var(--basic-animation);
 
     border-radius: 4px;
     border-color: transparent;
@@ -546,8 +547,8 @@ background: rgba(255, 255, 255, 0.1);
 
     opacity: 0;
     transform: translateY(100%);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity var(--basic-animation),
+    transform var(--basic-animation);
 }
 .text {
     display: inline-block;
@@ -556,8 +557,8 @@ background: rgba(255, 255, 255, 0.1);
 
     opacity: 0;
     transform: translateY(100%);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity var(--basic-animation),
+    transform var(--basic-animation);
     
     font-weight: 400;
     font-size: 18px;
@@ -566,7 +567,7 @@ background: rgba(255, 255, 255, 0.1);
     color: #FFFFFF;
 }
 .images-link {
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--basic-animation);
 
     display: block;
     text-decoration: none;
